@@ -15,8 +15,8 @@
 - Test Cases:
   - SwapObjects(ref num1, ref num2) with num1 = 25, num2 = 30 // Values after swap: 30, 25
   - SwapObjects(str1, str2) with str1 = "HelloWorld", str2 = "Programming" // Values after swap: "Programming", "HelloWorld"
-  - SwapObjects(str1, str2) with str1 = "Hi", str2 = "Programming" // Error: Length must be more than 5
-  - SwapObjects(ref num1, ref num2) with num1 = 10, num2 = 30 // Error: Value must be more than 18
+  - SwapObjects(str3, str2) with str1 = "Hi", str2 = "Programming" // Error: Length must be more than 5
+  - SwapObjects(ref num3, ref num2) with num1 = 10, num2 = 30 // Error: Value must be more than 18
   - SwapObjects(ref num1, str 1) // Error: Objects must be of same types
   - SwapObjects(true, false) // Error: Unsuported type
 
