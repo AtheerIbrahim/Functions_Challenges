@@ -45,6 +45,21 @@ namespace Functions_Challenges
                 Console.WriteLine($"Error: Unsupported data type");
             }
         }
+        public static void GuessingGame()
+        {
+            Random random = new Random();
+            int guess = random.Next(1,5);
+            while (true)
+            {
+                Console.WriteLine($"Enter a number to guess: ");
+                int number = Convert.ToInt32(Console.ReadLine());
+                if(number == guess)
+                {
+                Console.WriteLine($"Number Guessed successfully");
+                break;
+                }
+            }
+        }
         public static void Main(string[] args)
         {
             // Challenge 1: String and Number Processor
@@ -67,6 +82,10 @@ namespace Functions_Challenges
 
             SwapObjects(ref bool1, ref bool2); // Error: Unsupported data type
             SwapObjects(ref num1, ref str1); // Error: Objects must be of same types  
+
+            // Challenge 3: Guessing Game
+            Console.WriteLine("\nChallenge 3: Guessing Game");
+            GuessingGame(); // Expected outcome: User input until the correct number is guessed or user inputs `Quit`
         }
     }
 }
