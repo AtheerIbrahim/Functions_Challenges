@@ -60,6 +60,17 @@ namespace Functions_Challenges
                 }
             }
         }
+        public static void ReverseWords(string sentence)
+        {
+            string[] words = sentence.Split(" ");
+            for (int i = 0; i < words.Length; i++)
+            {
+                char[] charArray = words[i].ToCharArray();
+                Array.Reverse(charArray);
+                words[i] = new string(charArray);
+            }
+            Console.WriteLine(string.Join(" ", words));
+        }
         public static void Main(string[] args)
         {
             // Challenge 1: String and Number Processor
@@ -85,7 +96,11 @@ namespace Functions_Challenges
 
             // Challenge 3: Guessing Game
             Console.WriteLine("\nChallenge 3: Guessing Game");
-            GuessingGame(); // Expected outcome: User input until the correct number is guessed or user inputs `Quit`
+            //GuessingGame(); // Expected outcome: User input until the correct number is guessed
+
+            //Challenge 4: Simple Word Reversal
+            Console.WriteLine("\nChallenge 4: Simple Word Reversal");
+            ReverseWords("This is the original sentence!");
         }
     }
 }
